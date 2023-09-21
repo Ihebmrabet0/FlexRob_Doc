@@ -1,0 +1,1225 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1.0, shrink-to-fit=no">
+  <link href="assets/images/favicon.png" rel="icon" />
+  <title>Documentation | FlexRob Documentation</title>
+  <meta name="description" content="FlexRob Doc">
+  <meta name="author" content="">
+
+  <!-- Stylesheet
+============================== -->
+  <!-- Bootstrap -->
+  <link rel="stylesheet" type="text/css" href="assets/vendor/bootstrap/css/bootstrap.min.css" />
+  <!-- Font Awesome Icon -->
+  <link rel="stylesheet" type="text/css" href="assets/vendor/font-awesome/css/all.min.css" />
+  <!-- Magnific Popup -->
+  <link rel="stylesheet" type="text/css" href="assets/vendor/magnific-popup/magnific-popup.min.css" />
+  <!-- Highlight Syntax -->
+  <link rel="stylesheet" type="text/css" href="assets/vendor/highlight.js/styles/github.css" />
+  <!-- Custom Stylesheet -->
+  <link rel="stylesheet" type="text/css" href="assets/css/stylesheet.css" />
+</head>
+
+<body data-spy="scroll" data-target=".idocs-navigation" data-offset="125">
+
+  <!-- Preloader -->
+  <div class="preloader">
+    <div class="lds-ellipsis">
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+  </div>
+  <!-- Preloader End -->
+
+  <!-- Document Wrapper   
+=============================== -->
+  <div id="main-wrapper">
+
+    <!-- Header
+  ============================ -->
+    <header id="header" class="sticky-top">
+      <!-- Navbar -->
+      <nav class="primary-menu navbar navbar-expand-lg navbar-dropdown-dark">
+        <div class="container-fluid">
+          <!-- Sidebar Toggler -->
+          <button id="sidebarCollapse" class="navbar-toggler d-block d-md-none" type="button"><span></span><span
+              class="w-75"></span><span class="w-50"></span></button>
+
+          <!-- Logo -->
+          <!--  <a class="logo ml-md-3" href="index.html" title="FlexRob Doc" src="assets/images/Logo.png"> <a style="font-size: 2.5em; font-weight: bold; color: black; font-family: system-ui;">FlexRob</a> </a>-->
+          <a class="logo ml-md-5" href="index.html" title="iDocs Template"> <img src="assets/images/mod.png"
+              alt="iDocs Template" /> </a>
+          <span class="text-2 ml-2">v1.0</span>
+          <!-- Logo End -->
+
+          <!-- Navbar Toggler -->
+          <button class="navbar-toggler ml-auto" type="button" data-toggle="collapse"
+            data-target="#header-nav"><span></span><span></span><span></span></button>
+
+          <div id="header-nav" class="collapse navbar-collapse justify-content-end">
+            <ul class="navbar-nav">
+              <li><a target="_blank" href="">Support</a></li>
+            </ul>
+          </div>
+          <ul class="social-icons social-icons-sm ml-lg-2 mr-2">
+            <li class="social-icons-cloud"><a data-toggle="tooltip" href="" target="_blank" title=""
+                data-original-title="Cloud"><i class="fa-regular fa-cloud"></i></a></li>
+            <li class="social-icons-gitlab"><a data-toggle="tooltip" href="" target="_blank" title=""
+                data-original-title="Gitlab"><i class="fab fa-gitlab"></i></a></li>
+          </ul>
+        </div>
+      </nav>
+      <!-- Navbar End -->
+    </header>
+    <!-- Header End -->
+
+    <!-- Content
+  ============================ -->
+    <div id="content" role="main">
+
+      <!-- Sidebar Navigation
+	============================ -->
+      <div class="idocs-navigation bg-light">
+        <ul class="nav flex-column ">
+          <li class="nav-item"><a class="nav-link active" href="#idocs_start">Getting Started</a>
+            <ul class="nav flex-column">
+              <li class="nav-item"><a class="nav-link" href="#idocs_build">Build</a></li>
+              <li class="nav-item"><a class="nav-link" href="#idocs_launch">Launch</a></li>
+              <li class="nav-item"><a class="nav-link" href="#idocs_nodes">Nodes</a></li>
+              <li class="nav-item"><a class="nav-link" href="#idocs_topics">Topics</a></li>
+              <li class="nav-item"><a class="nav-link" href="#idocs_interfaces">Interfaces</a></li>
+              <li class="nav-item"><a class="nav-link" href="#idocs_wiring">Wiring</a></li>
+            </ul>
+          </li>
+          <li class="nav-item"><a class="nav-link" href="#idocs_node">Node</a>
+            <ul class="nav flex-column">
+              <li class="nav-item"><a class="nav-link" href="#idocs_KukaRobot">KukaRobot</a></li>
+              <li class="nav-item"><a class="nav-link" href="#idocs_Recorder">Recorder</a></li>
+              <li class="nav-item"><a class="nav-link" href="#idocs_Sender">Sender</a></li>
+              <li class="nav-item"><a class="nav-link" href="#idocs_Receiver">Receiver</a></li>
+              <li class="nav-item"><a class="nav-link" href="#idocs_FTSN">FTSN</a></li>
+              <li class="nav-item"><a class="nav-link" href="#idocs_AutoMode">AutoMode</a></li>
+            </ul>
+          </li>
+          <li class="nav-item"><a class="nav-link" href="#idocs_Raspberry_Pi_Code">Raspberry Pi Code</a></li>
+          <li class="nav-item"><a class="nav-link" href="#idocs_Arduino_Code">Arduino Code</a></li>
+          <li class="nav-item"><a class="nav-link" href="#idocs_Kuka_Code">KUKA Code</a></li>
+          <li class="nav-item"><a class="nav-link" href="#idocs_Interface">Interface</a></li>
+          <!--
+        <li class="nav-item"><a class="nav-link" href="#idocs_components">Components</a>
+          <ul class="nav flex-column">
+            <li class="nav-item"><a class="nav-link" href="#idocs_accordion">Accordion</a></li>
+            <li class="nav-item"><a class="nav-link" href="#idocs_tabs">Tabs</a></li>
+            <li class="nav-item"><a class="nav-link" href="#idocs_social_icon">Social Icon</a></li>
+            <li class="nav-item"><a class="nav-link" href="#idocs_helper_classes">Helper Classes</a></li>
+          </ul>
+        </li>-->
+          <!--
+		<li class="nav-item"><a class="nav-link" href="#idocs_faq">FAQ</a></li>
+        <li class="nav-item"><a class="nav-link" href="#idocs_source_credits">Source & Credits</a></li> -->
+          <li class="nav-item"><a class="nav-link" href="#idocs_support">Support</a></li>
+          <!--
+		<li class="nav-item"><a class="nav-link" href="#idocs_templates">More Templates</a></li>
+		<li class="nav-item"><a class="nav-link" href="#idocs_changelog">Changelog</a>
+			<ul class="nav flex-column">
+            <li class="nav-item"><a class="nav-link" href="#v1-1">v1.1</a></li>
+            <li class="nav-item"><a class="nav-link" href="#v1-0">v1.0</a></li>
+          </ul>
+		</li>-->
+        </ul>
+      </div>
+
+      <!-- Docs Content
+	============================ -->
+      <div class="idocs-content">
+        <div class="container">
+
+          <!-- Getting Started
+		============================ -->
+          <section id="idocs_start">
+            <h1>Documentation</h1>
+            <h2>FlexRob Doc</h2>
+            <hr>
+            <div class="row">
+              <div class="col-sm-6 col-lg-4">
+                <ul class="list-unstyled">
+                  <li><strong>Version:</strong> 1.0</li>
+                  <li><strong>Author:</strong> <a target="_blank">Iheb Mrabet</a></li>
+                  <li><strong>ROS2 Version:</strong> Foxy Fitzroy</li>
+                </ul>
+              </div>
+              <div class="col-sm-6 col-lg-4">
+                <ul class="list-unstyled">
+                  <li><strong class="font-weight-700">Created:</strong> 16 January, 2023</li>
+                  <li><strong>Update:</strong> 17 January, 2023</li>
+                  <li><strong class="font-weight-700">EOL date:</strong> May 2023</li>
+
+                </ul>
+              </div>
+            </div>
+            <p class="alert alert-info">If you have any questions that are beyond the scope of this help file, Please
+              feel free to email via <a target="_blank" href="mailto:iheb.mrabet@uni-rostock.de">Support Email</a>.</p>
+
+          </section>
+
+          <hr class="divider">
+
+          <!-- Build
+		============================ -->
+          <section id="idocs_build">
+            <h2>Build</h2>
+            <p class="lead">Build package:</p>
+            <ol>
+              <li>Change directory: <code class="html">cd ros2_ws</code> </li>
+              <li>Run the node:<code>colcon build --packages-select "my_py_pkg" --symlink-install</code> </li>
+            </ol>
+            <p><span class="badge badge-danger text-uppercase mr-2">Note</span>Make sure that the correct source is
+              build!!</p>
+          </section>
+
+          <hr class="divider">
+
+          <!-- Launch
+		============================ -->
+          <section id="idocs_launch">
+            <h2>Launch</h2>
+            <p class="lead">Bash Script:</p>
+            <p>This is a Bash script that starts various processes for Flexrob system.<br>
+              It runs VUE.JS based GUI, Controller, KukaRobot, and FTSN processes in terminal windows and waits for user
+              to confirm Kuka robot is in home position before starting FTSN process.
+            </p>
+            <a class="btn btn-primary d-flex justify-content-center" style="font-weight: 700;" id="Process"
+              target="_blank">SEE THE PROCESS</a>
+            <div class="mt-3" id="cont" style="display: none;">
+              <img src="assets/images/ScreenShot/1.png"
+                style="display: block; margin-left: auto; margin-right: auto; width: 60em;" class="img-fluid"
+                alt="Responsive image">
+              <img src="assets/images/ScreenShot/2.png"
+                style="display: block; margin-left: auto; margin-right: auto; width: 60em;" class="img-fluid"
+                alt="Responsive image">
+              <p class="lead">Run Handguiding Script <code>Handguiding4.src</code> :</p>
+              <img src="assets/images/ScreenShot/3.png"
+                style="display: block; margin-left: auto; margin-right: auto; height: 50em;" class="img-fluid"
+                alt="Responsive image">
+              <p class="lead">Run the code :</p>
+              <img src="assets/images/ScreenShot/4.png"
+                style="display: block; margin-left: auto; margin-right: auto; height: 50em;" class="img-fluid"
+                alt="Responsive image">
+              <img src="assets/images/ScreenShot/5.png"
+                style="display: block; margin-left: auto; margin-right: auto; width: 60em;" class="img-fluid"
+                alt="Responsive image">
+              <p class="lead">All the scripts are running :</p>
+              <img src="assets/images/ScreenShot/6.png"
+                style="display: block; margin-left: auto; margin-right: auto; width: 60em;" class="img-fluid"
+                alt="Responsive image">
+              <p class="lead">Open the VUE.JS Interface from the Handguiding device:</p>
+              <img src="assets/images/ScreenShot/7.png"
+                style="display: block; margin-left: auto; margin-right: auto; width: 60em;" class="img-fluid"
+                alt="Responsive image">
+              <a class="btn btn-primary d-flex justify-content-center mt-3 mb-3"
+                style="font-weight: 700; background-color: grey; border-color: white;" id="hide-screenshots"
+                target="_blank">Hide the screenshots</a>
+            </div>
+
+            <script type="text/javascript">
+              document.getElementById("Process").onclick = function () {
+                if (document.getElementById("cont").style.display === "none") {
+                  document.getElementById("cont").style.display = "block";
+                  document.getElementById("Process").style.cssText = "background: red; font-weight: 700; border-color: white;";
+                } else {
+                  document.getElementById("Process").style.cssText = "background: bleu; font-weight: 700;";
+                  document.getElementById("cont").style.display = "none";
+                }
+              }
+
+              document.getElementById("hide-screenshots").onclick = function () {
+                document.getElementById("Process").style.cssText = "background: bleu; font-weight: 700;";
+                document.getElementById("cont").style.display = "none";
+              }
+
+
+            </script>
+
+
+
+            <p class="lead">Launch a specific node</p>
+            <ol>
+              <li>Change directory: <code class="html">cd ros2_ws</code> </li>
+              <li>Run the node:<code>ros2 run my_py_pkg "py_node"</code> </li>
+            </ol>
+            <p class="lead">Launch VUE.JS server</p>
+            <ol>
+              <li>Change directory: <code class="html">cd ../Desktop/GUI/gui-vuejs-main/client</code> </li>
+              <li>Run the server:<code>serve -s dist</code> </li>
+            </ol>
+
+          </section>
+
+          <hr class="divider">
+
+          <!-- Nodes
+    ============================ -->
+
+          <section id="idocs_nodes">
+            <h2>Nodes</h2>
+            <p class="lead">Package nodes:</p>
+            <p>The Package is divided into five main nodes: KukaRobot, Controller, Recorder , FTSN and Automode.
+              The KukaRobot node handles the communication with the robot, the Controller class receives messages from
+              an MQTT client and publishes them to the ROS2 network, the Recorder class records and saves the data
+              received from the robot and reads it from the file , the FTSN node reads and processes sensor inputs and
+              then sends them using KukaRobot node and the Automode processes the autonomous movement of the robot using
+              the camera.</p>
+            <img src="assets/images/rosgraph.png"
+              style="display: block; margin-left: auto; margin-right: auto; width: 50em;" class="img-fluid"
+              alt="Responsive image">
+            <p class="lead">Handguiding methodology:</p>
+            <img src="assets/images/diag.png"
+              style="display: block; margin-left: auto; margin-right: auto; width: 60em;" class="img-fluid"
+              alt="Responsive image">
+
+
+          </section>
+
+          <hr class="divider">
+
+          <!-- Topics
+		============================ -->
+          <section id="idocs_topics">
+            <h2>Topics</h2>
+            <p>The ROS2 pack contains different Topics and each has its own purpose:</p>
+
+            <div class="table-responsive">
+              <table class="table table-bordered">
+                <thead>
+                  <tr>
+                    <th>Topic Name</th>
+                    <th>Type</th>
+                    <th>Content</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Mode</td>
+                    <td><code>Int64</code></td>
+                    <td>setting the mode of operation for the Kuka robot:
+                      <ul>
+                        <li><code>0</code> - Handguiding</li>
+                        <li><code>1</code> - Movement Recording</li>
+                        <li><code>2</code> - Replay Movement</li>
+                        <li><code>3</code> - Automatic Movement</li>
+                        <li><code>9</code> - Stop</li>
+                      </ul>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>Type</td>
+                    <td><code>Int64</code></td>
+                    <td>setting the type of operation for the Kuka robot:
+                      <ul>
+                        <li><code>0</code> - Linear</li>
+                        <li><code>1</code> - PTP (Point to Point)</li>
+                        <li><code>2</code> - OpenGripper</li>
+                        <li><code>3</code> - CloseGripper</li>
+                        <li><code>4</code> - Perpendicular</li>
+                      </ul>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>Blockcord</td>
+                    <td><code>Int64</code></td>
+                    <td>Blocking or Activating TCP (Tool Center Point) Axis for the Kuka robot:<br />
+                      - The First digit is the Axis Type Digit:
+                      <div class="table-responsive">
+                        <table class="table table-bordered">
+                          <thead>
+                            <tr>
+                              <th><strong>Axis</strong></th>
+                              <th>X</th>
+                              <th>Y</th>
+                              <th>Z</th>
+                              <th>A</th>
+                              <th>B</th>
+                              <th>C</th>
+                            </tr>
+                          </thead>
+                          <tbody>
+                            <tr>
+                              <td><strong>Value</strong></td>
+                              <td>1-</td>
+                              <td>2-</td>
+                              <td>3-</td>
+                              <td>4-</td>
+                              <td>5-</td>
+                              <td>6-</td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      - The Second digit is the Activation or Blocking Digit:
+                      <ul>
+                        <li><code>-0</code> - Blocked</li>
+                        <li><code>-1</code> - Active</li>
+                      </ul>
+                    </td>
+                  </tr>
+
+                  <tr>
+                    <td>CordfSens</td>
+                    <td><code>FTS</code></td>
+                    <td>topic for sending the current forces and torque from the sensor to the robot:
+                      <pre
+                        class="mb-0"><code>rostopic echo /cordfSens</br>my_robot_interfaces.msg.FTS(fx=-0.0, fy=-0.0, fz=0.0, tx=-0.0, ty=-0.0, tz=0.0, ax=-0.01, ay=1.0, az=-0.03)</code></pre>
+                    </td>
+                  </tr>
+
+                  <tr>
+                    <td>CordfRec</td>
+                    <td><code>MOVED</code></td>
+                    <td>topic for sending recorded movements to the Kuka robot:
+                      <pre
+                        class="mb-0"><code>rostopic echo /CordfRec</br>my_robot_interfaces.msg.MOVED(x=345.963074, y=1113.982422, z=1005.829773, a=153.926178, b=34.503838, c=134.681763, v=0.001, o=66.500999, t=2.0)</code></pre>
+                    </td>
+                  </tr>
+
+                  <tr>
+                    <td>CordfAuto</td>
+                    <td><code>MOVED</code></td>
+                    <td>topic for sending automatic generated movements to the Kuka robot:
+                      <pre
+                        class="mb-0"><code>rostopic echo /CordfAuto</br>my_robot_interfaces.msg.MOVED(x=-164.413803, y=1183.641846, z=885.11499, a=175.02858, b=-0.745967, c=352.484024, v=1.0, o=80.0, t=0.0)</code></pre>
+                    </td>
+                  </tr>
+
+                  <tr>
+                    <td>RecMov</td>
+                    <td><code>MOVED</code></td>
+                    <td>topic for sending the current position of the robot to be recorded in the csv file:
+                      <pre
+                        class="mb-0"><code>rostopic echo /RecMov</br>my_robot_interfaces.msg.MOVED(x=1092.059082, y=-115.387276, z=1443.366821, a=95.209999, b=0.0, c=90.0, v=0.16048, o=0.0001, t=0.0)</code></pre>
+                    </td>
+                  </tr>
+
+                  <tr>
+                    <td>Velocity</td>
+                    <td><code>Int64</code></td>
+                    <td>topic for setting the velocity of the Kuka robot (value is sent as a percentage between 0%, 10%, 25%, 45%, 70%, 100%) 
+                    </td>
+                  </tr>
+
+                  <tr>
+                    <td>Request</td>
+                    <td><code>Request</code></td>
+                    <td>topic for sending the orders from the interface to the Recorder
+                      <div class="table-responsive">
+                        <table class="table-bordered">
+                          <thead>
+                            <tr>
+                              <th><strong>Name</strong></th>
+                              <th>sendproglist</th>
+                              <th>save</th>
+                              <th>remove</th>
+                              <th>start</th>
+                              <th>stop</th>
+                              <th>pause</th>
+                              <th>resume</th>
+                              <th>record</th>
+                              <th>recordpause</th>
+                              <th>recordresume</th>
+                              <th>recordstop</th>
+                            </tr>
+                          </thead>
+                          <tbody>
+                            <tr>
+                              <td><strong>Description</strong></td>
+                              <td>Request program list</td>
+                              <td>Naming the program</td>
+                              <td>Deleting a program</td>
+                              <td>Starting a program</td>
+                              <td>Stopping the program</td>
+                              <td>Pausing the program</td>
+                              <td>Resume the program</td>
+                              <td>Start recording the program</td>
+                              <td>Pause the recording the program</td>
+                              <td>Resume the recording the program</td>
+                              <td>Stop the recording the program</td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </td>
+                  </tr>
+
+                  <tr>
+                    <td>ProgList</td>
+                    <td><code>String</code></td>
+                    <td>topic for sending the program list (Program Name // Program Duration(sec))
+                      <pre
+                        class="mb-0"><code>rostopic echo /ProgList</br>my_robot_interfaces.msg.String('lwf1//10.485007286071777,,video1//116.4000244140625,,objekt1//42.89987921714783,,video//99.9849145412445,,recordvid//136.3149139881134,,warten2//16.02592444419861,,video99//130.85994744300842,,lwf2//9.705054759979248,,lwf3//7.340078115463257,,data0//149.11453890800476')</code></pre>
+                    </td>
+                  </tr>
+
+                  <tr>
+                    <td>TypeGripper</td>
+                    <td><code>Int64</code></td>
+                    <td>topic for transmitting a seperate type for the Gripper to the python script to initiate the button animation  
+                    </td>
+                  </tr>
+
+                  <tr>
+                    <td>FinishRecMov</td>
+                    <td><code>String</code></td>
+                    <td>topic for signaling the interface when the replay hhas concluded
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+
+          </section>
+
+          <hr class="divider">
+
+          <!-- Interfaces
+		============================ -->
+          <section id="idocs_interfaces">
+            <h2>Interfaces</h2>
+            <p class="lead">FTS.msg</p>
+            <div class="table-responsive">
+              <table class="table table-bordered">
+                <thead>
+                  <tr>
+                    <th><strong>Fieldname</strong></th>
+                    <th>fx</th>
+                    <th>fy</th>
+                    <th>fz</th>
+                    <th>tx</th>
+                    <th>ty</th>
+                    <th>tz</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><strong>Fieldtype</strong></td>
+                    <td>float64</td>
+                    <td>float64</td>
+                    <td>float64</td>
+                    <td>float64</td>
+                    <td>float64</td>
+                    <td>float64</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <p class="lead">MOVED.msg</p>
+            <div class="table-responsive">
+              <table class="table table-bordered">
+                <thead>
+                  <tr>
+                    <th><strong>Fieldname</strong></th>
+                    <th>x</th>
+                    <th>y</th>
+                    <th>z</th>
+                    <th>a</th>
+                    <th>b</th>
+                    <th>c</th>
+                    <th>v</th>
+                    <th>o</th>
+                    <th>t</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><strong>Fieldtype</strong></td>
+                    <td>float64</td>
+                    <td>float64</td>
+                    <td>float64</td>
+                    <td>float64</td>
+                    <td>float64</td>
+                    <td>float64</td>
+                    <td>float64</td>
+                    <td>float64</td>
+                    <td>float64</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <p>
+            <ul>
+              <li><code>v</code> - Linear Speed</li>
+              <li><code>o</code> - Rotation Speed</li>
+              <li><code>t</code> - Type</li>
+            </ul>
+            <p class="lead">Request.msg</p>
+            <div class="table-responsive">
+              <table class="table table-bordered">
+                <thead>
+                  <tr>
+                    <th><strong>Fieldname</strong></th>
+                    <th>sendproglist</th>
+                    <th>save</th>
+                    <th>remove</th>
+                    <th>start</th>
+                    <th>stop</th>
+                    <th>pause</th>
+                    <th>resume</th>
+                    <th>record</th>
+                    <th>recordpause</th>
+                    <th>recordresume</th>
+                    <th>recordstop</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><strong>Fieldtype</strong></td>
+                    <td>bool</td>
+                    <td>string</td>
+                    <td>string</td>
+                    <td>string</td>
+                    <td>bool</td>
+                    <td>bool</td>
+                    <td>bool</td>
+                    <td>bool</td>
+                    <td>bool</td>
+                    <td>bool</td>
+                    <td>bool</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <p>
+            <p class="alert alert-info">For more information about Request.msg you can see the <a href="#idocs_Receiver">Receiver</a> Node</p>
+            </p>
+
+          </section>
+
+          <hr class="divider">
+
+          <!-- Wiring
+		============================ -->
+          <section id="idocs_wiring">
+            <h2>Wiring</h2>
+            <div class="table-responsive">
+              <table class="table table-bordered">
+                <thead>
+                  <tr>
+                    <th><strong>Components</strong></th>
+                    <th>Use</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Arduino ESP-8266</td>
+                    <td>Transfering the speed regulator and the close gripper button signal to the Raspberry</td>
+                  </tr>
+                  <tr>
+                    <td>Raspberry Pie 4 model B, 8GB ram</td>
+                    <td>Opens the FlexRob Interface, establishes connections with Arduino, GPIO extension, and relays to
+                      enable signal transmission and reception for the buttons. Additionally, it interfaces with the
+                      main computer.</td>
+                  </tr>
+                  <tr>
+                    <td>Pin-Expander MCP23017</td>
+                    <td>Expends the GPIO Pins to connect with the buttons</td>
+                  </tr>
+                  <tr>
+                    <td>Display LCD-Touch, 7" RPI LCD 7TD IPS</td>
+                    <td>Displaying the FlexRob UI and allowing control by touch</td>
+                </tbody>
+              </table>
+            </div>
+            <h5>The following is the electrical wiring plan:</h5>
+            <img src="assets/images/wiring.png" alt="Wiring" class="img-fluid">
+            <a href="https://lucid.app/lucidchart/49759642-2518-447c-b959-2c590bd48421/edit?viewport_loc=-78%2C-64%2C3840%2C1944%2C0_0&invitationId=inv_5b37ffed-2bce-444b-8719-fceb56d6e669"
+              target="_blank" rel="noopener noreferrer">
+              <button class="btn d-flex justify-content-center">
+                <img src="assets/images/lucidchart.png" alt="" style="width: 100px;">
+                Link
+              </button>
+            </a>
+          </section>
+
+          <hr class="divider">
+
+          <!-- Node
+		============================ -->
+          <section id="idocs_node">
+            <h2>Node</h2>
+            <p class="lead mb-5" style="font-size: 1.1em;">A ROS2 node is a software component that represents a single
+              process in a ROS2 system.
+              It communicates with other nodes and the system by publishing and subscribing to topics and providing and
+              using services.
+              Nodes perform specific tasks and interact with hardware or software. And this ROS2 package contains five
+              nodes which are explained below:</p>
+          </section>
+
+
+          <!-- KukaRobot
+		============================ -->
+          <section id="idocs_KukaRobot">
+            <h2>KukaRobot</h2>
+            <p>This is a python script that creates a ROS2 node named "KukaRobot". This node communicates with a Kuka
+              robot and performs various actions based on input received through ROS2 topics.</p>
+
+            <p>The <strong>InitiateKuka</strong> function creates a socket connection with the Kuka robot. It does this
+              by creating a socket object using the socket library and binding it to an IP address and port number. The
+              port and the ip adresse are in <strong>ConnectionRobot</strong> function found.</p>
+
+            <p><strong>Sendtorobot</strong> is a callback function that is called when a message is published on the
+              "CordfSens" topic. It is used to send the data contained in the message to the Kuka robot. The data in the
+              message consists of the 6-dimensional vector (x,y,z,a,b,c) of the rotation and translation of the robot's
+              end effector in message type "FTS". The function does the following:</p>
+            <ul>
+              <li>Reads the values from the sensor</li>
+              <li>Blocks any coordinated if needed that means make it equal to 0</li>
+              <li>Converts the values to xml structure</li>
+              <li>Send the xml structure to the robot</li>
+            </ul>
+
+            <p><strong>get_mov</strong> is a method of the KukaRobot class. It is called repeatedly at a fixed interval,
+              as specified by the self.timer_ object, which is created with a call to self.create_timer(0.005,
+              self.get_mov).
+              And it is responsible for getting the position of the robot and publishing it on the "RecMov" topic to be
+              recorded.
+              The function does the following:
+            </p>
+            <ul>
+
+              <li>Sets the blocking mode of the socket connection to False and the timeout to 0.001 seconds.</li>
+              <li>Initializes the data and ResList variables to None and an empty list respectively.</li>
+              <li>Tries to receive a message from the Kuka robot over the socket connection. If no message is received,
+                the loop continues.</li>
+              <li>If a message is received and it is a valid XML message, the message is decoded and converted into an
+                XML tree using the ET module.</li>
+              <li>Tries to extract the data fields specified in the TopicNmList parameter from the XML tree and append
+                them to the ResList variable. If an exception is raised, the loop continues.</li>
+              <li>Publishes the ResList variable as a message of type "MOVED" on the "RecMov" topic.</li>
+            </ul>
+
+            <p><strong>SendtorobotRecs</strong> is a callback function that is called when a message is published on the
+              "CordfRec" or "CordfAuto" topics. It is used to send the data contained in the message to the Kuka robot.
+              The data in the message consists of the coordinates of the end effector of the robot in the "MOVED"
+              message type. The function does the following:</p>
+            <ul>
+              <li>Extracts the x, y, z, a, b and c coordinates from the message and make sure that the rotation and
+                translation speed does not exceed the allowed speed intervall. (0&#60v≤3 and 0&#60o≤300)</li>
+              <li>Calls the set_robot_cord function on the Kuka robot connection with the x, y, z coordinates as
+                arguments. This sends a message to the Kuka robot with the new end effector coordinates.</li>
+            </ul>
+
+          </section>
+
+          <hr class="divider">
+
+          <!-- Recorder
+		============================ -->
+          <section id="idocs_Recorder">
+            <h2>Recorder</h2>
+
+            <p>The <strong>Recorder</strong> class is responsible for recording the data received from the robot and
+              saving it to a file.
+              And it is capable of reading the recorded data from the file and publishing it to the ROS2 network for
+              running the robot.</p>
+
+            <p>The <strong>Recorderfunc</strong> function: it is a callback function which is called when a message is
+              received on topic 'RecMov'.
+              It saves the received message in a variable called 'Listm' which is a list of the robot coordinates,
+              velocities, orientation and the type. It takes the current timestamp and subtract it from the initial time of the
+              recording process to get the time passed from the start and add it to the list and in the end saves it in a CSV file.
+            <code></code>
+            </p>
+
+            <p>The <strong>Moveexcecute</strong> function is a member of the Recorder class in the provided code.
+              The purpose of the function is to read recorded data from a file, and then sequentially send the recorded
+              data as messages on a ROS topic for movement execution.
+              The function checks if the mode of the node is set to 2 (movement recorded mode) before executing.
+              If the mode is correct, it reads the data from a file, and stores it in self.rows.
+              Then, it uses a while loop to iterate through the rows and send the movement data as messages on a ROS
+              topic.
+              It sleeps between each step of the loop to simulate the recorded time delay. </p>
+
+              <p><strong>Requestfunc</strong> is a callback function that handles incoming requests via a custom message type called Request. 
+              Depending on the content of the request message, it performs actions such as saving, removing, starting, stopping, pausing, resuming, or stopping the recording of movement data.
+              </p>
+
+              <p>The <strong>ReadProgList</strong> reads the list of available programs from the 'Cord' directory and calculates the time difference between the first and last recorded points for each program. 
+                It returns a string containing program names and their respective time differences.
+              </p> 
+
+              <p> The <strong>CreateNFile</strong> creates a new CSV file with a unique name for recording.
+              </p>
+          </section>
+
+          <hr class="divider">
+
+          <!-- Sender
+    ============================ -->
+          <section id="idocs_Sender">
+            <h2>Sender</h2>
+            <p>The <strong>Sender</strong> node facilitates communication and control between ROS 2 and MQTT systems
+              which is the UI in this case.
+              It subscribes to "ProgList" and "error" topics, forwarding received data to MQTT.
+              It publishes control data to ROS 2 topics like "Mode," "Type," etc., and uses a Request type message to
+              manage program execution and control.
+            </p>
+
+
+          </section>
+
+          <hr class="divider">
+
+          <!-- Receiver
+          ============================ -->
+          <section id="idocs_Receiver">
+            <h2>Receiver</h2>
+            <p>
+              The <strong>Receiver</strong> node functions as a ROS 2 node that acts as a bridge between MQTT and ROS 2 systems. 
+              Its core role involves receiving data from MQTT, transforming it, and subsequently publishing the transformed data to ROS 2 nodes for further processing and utilization.            </p>
+
+            <div class="table-responsive">
+              <table class="table table-bordered">
+                <tr>
+                  <th>Topic</th>
+                  <th>Information</th>
+                  <th>Sent Data</th>
+                  <th>Explanation</th>
+                </tr>
+                <tr>
+                  <td rowspan="2">Handguiding/Mode</td>
+                  <td>Handguiding</td>
+                  <td>0</td>
+                  <td>If the topic is "Handguiding/Mode" and the information is "Handguiding", sent data is set to 0.
+                  </td>
+                </tr>
+                <tr>
+                  <td>⋮</td>
+                  <td>⋮</td>
+                  <td>You can see the rest of the Topics in the <a href="#idocs_topics">Topics</a> section</td>
+                </tr>
+                <tr>
+                  <td rowspan="2">Handguiding/Type</td>
+                  <td>Linear</td>
+                  <td>0</td>
+                  <td>If the topic is "Handguiding/Type" and the information is "Linear", sent data is set to 0.</td>
+                </tr>
+                <tr>
+                  <td>⋮</td>
+                  <td>⋮</td>
+                  <td>You can see the rest of the Topics in the <a href="#idocs_topics">Topics</a> section</td>
+                </tr>
+                <tr>
+                  <td>Handguiding/Velocity</td>
+                  <td>(Value)</td>
+                  <td>sequence_velocity(Value)</td>
+                  <td>If the topic is "Handguiding/Velocity", sent data is calculated using the sequence_velocity
+                    function, which is <code>(5/2)*(x-1)*(x+2)</code> that means it can get 0, 10, 25, 45, 70, 100 % of
+                    the speed</td>
+                </tr>
+
+                <tr>
+                  <td rowspan="3">Handguiding/Blockcord</td>
+                  <td>"X"</td>
+                  <td>11</td>
+                  <td>If the value received from MQTT is "X", then it is encoded to 11, representing the blocking of the
+                    X-coordinate axis.</td>
+                </tr>
+                <tr>
+                  <td>"BX"</td>
+                  <td>10</td>
+                  <td>If the value received from MQTT is "BX", then it is encoded to 10, representing the blocking of
+                    the
+                    X-coordinate axis.</td>
+                </tr>
+                <tr>
+                  <td>⋮</td>
+                  <td>⋮</td>
+                  <td>You can see the rest of the Topics in the <a href="#idocs_topics">Topics</a> section</td>
+                  </td>
+                </tr>
+                <tr>
+                  <td rowspan="11">Handguiding/Program <br>
+                    <br>
+                    <p class="alert alert-info">For more information you can see the <a href="#idocs_Recorder">Recorder</a> Node</p>
+                  </td>
+                  <td>Start</td>
+                  <td>-</td>
+                  <td>Initiates program start request, updates mode to "Replay" (2).</td>
+              </tr>
+              <tr>
+                  <td>Stop</td>
+                  <td>-</td>
+                  <td>Requests program stop, updates mode to "Stop" (9).</td>
+              </tr>
+              <tr>
+                  <td>Pause</td>
+                  <td>-</td>
+                  <td>Requests program pause, no mode change.</td>
+              </tr>
+              <tr>
+                  <td>Resume</td>
+                  <td>-</td>
+                  <td>Requests program resume, no mode change.</td>
+              </tr>
+              <tr>
+                  <td>Remove</td>
+                  <td>-</td>
+                  <td>Requests program removal using SendRequest function, no mode change.</td>
+              </tr>
+              <tr>
+                  <td>Save</td>
+                  <td>-</td>
+                  <td>Requests program save using SendRequest function, no mode change.</td>
+              </tr>
+              <tr>
+                  <td>SendProgList</td>
+                  <td>-</td>
+                  <td>Requests sending of program list using SendRequest function, no mode change.</td>
+              </tr>
+              <tr>
+                  <td>Record</td>
+                  <td>-</td>
+                  <td>Starts program recording using SendRequest function, updates mode to "Recording" (1).</td>
+              </tr>
+              <tr>
+                  <td>RecordPause</td>
+                  <td>-</td>
+                  <td>Requests pause of recording using SendRequest function, no mode change.</td>
+              </tr>
+              <tr>
+                  <td>RecordResume</td>
+                  <td>-</td>
+                  <td>Requests resume of paused recording using SendRequest function, no mode change.</td>
+              </tr>
+              <tr>
+                  <td>RecordStop</td>
+                  <td>-</td>
+                  <td>Requests stop of recording using SendRequest function, updates mode to "Stop" (9).</td>
+              </tr>
+              </table>
+            </div>
+
+
+          </section>
+
+          <hr class="divider">
+
+          <!-- FTSN
+		============================ -->
+          <section id="idocs_FTSN">
+            <h2>FTSN</h2>
+            <p>This code is a python script that interfaces with a <strong>Force Torque Sensor (FTS)</strong> through a
+              serial connection.
+              The script uses the minimalmodbus library for communication with the sensor.
+              The script defines a ROS2 node called "<strong>FTSN</strong>" (FTS node) which runs a timer that sends
+              data from the FTS at a frequency of 0.02 seconds.
+              The FTSN node publishes the sensor data on a topic called "CordfSens" as a message of type FTS.</p>
+
+            <p>This is the <strong>initiate_sensor_data</strong> function, which is used to initialize the sensor data
+              for the FTSN class, which is a node that reads data from a force torque sensor.
+              The function first defines several lambda functions which set a lower or upper limit for some variables.
+              Next, it sets several variables such as schrittf and schrittt (These are the steps to vector multiplier
+              for rotation and translation) and initializes a serial connection with the sensor using the python library
+              minimalmodbus.
+              Once the connection is set, the function uses minimalmodbus to read some registers from the sensor and
+              saves the values as fxZero, fyZero, fzZero, txZero, tyZero, tzZero, axZero, ayZero, and azZero.
+              These values are used as a reference or "zero" point for the sensor data.
+              Finally, the function returns these variables as a tuple and returns them to be used by the rest of the
+              class.</p>
+
+            <p>The function <strong>get_sensor_data</strong> is used to read data from a force and torque sensor.
+              The sensor communicates with the system through a serial port, using the minimalmodbus library.
+              The sensor registers (180,6) and (190,3) are read and then converted to physical units of measurement,
+              force, torque and acceleration.
+              then it's removing the zero offset and do some manipulation before sending the data to a publisher.
+              The goal of the code is to read the data from the sensor and convert it to physical units and publishing
+              the data as FTS message type.</p>
+            <p><code>const = 13</code> is the weight of the device that is attached to the sensor. In this case it is
+              1.3 KG</p>
+            <pre><code class="python">#if the sensor position has been changed this variables must be changed to fit the new position
+        fyy = fz
+        fzz = fy
+        txx = tx
+        tyy = tz
+        tzz = ty
+
+        axx = ax
+        ayy = az
+        azz = ay</code></pre>
+
+          </section>
+
+          <hr class="divider">
+
+          <!-- AutoMode
+		============================ -->
+          <section id="idocs_AutoMode">
+            <h2>AutoMode</h2>
+
+            <p>This ROS2 Node <strong>AutoMode</strong> which does object detection and movement based on a pre-recorded
+              movement.</p>
+
+            <p>When in <strong>AutoMode</strong>, the node calls an external function called
+              <strong>InitRecognito()</strong> to initiate a pre-trained neural network model (mask_rcnn_object_0005.h5)
+              for object detection (it uses the matterport's Mask R-CNN implementation), and uses an OpenCV-based webcam
+              video stream to get video frames.
+            </p>
+
+            <p><strong>get_cord_camera</strong> function detects objects in an image, using a pre-trained object
+              detection model, and returns the coordinates, center and rotation angle of the bounding box of each object
+              detected. The function accepts two inputs, cap and test_model, where cap is the capture object used to
+              capture images from the camera, and test_model is the pre-trained object detection model that is used to
+              perform the detection.<br />
+
+              The function starts by capturing an image frame from the camera using the cap.read() function.
+              Then, it converts the image frame to RGB color format.
+              After that, the function applies the object detection model to the image, and the result is stored in the
+              variable r.
+              Next, it iterates through the objects detected in the image, discarding the object with confidence score
+              less than 0.96.
+              The function uses the mask of the object to find its contours, and then it calculates the minimum area
+              rectangle which bounding the object and calls it as 'rect'.
+              From that it also calculates the four coordinates of that rectangle and stores it as 'box'.<br />
+
+              The function then checks if the width and height of the bounding box is greater than 50, and if the width
+              is greater than the height or vice versa, it rotates the angle. Finally, it appends the center point (x
+              and y) of the rectangle, the angle of rotation and width and height of the rectangle into the object list,
+              and sorts this list based on the x-coordinate of the center points of the rectangles in reverse order and
+              returns the list as final output.</p>
+            <div class="alert alert-danger">The next part is not yet fully developed, but it works for a simple side by
+              side palletizing and all the parameters are initially declared.</div>
+
+            <p>The <strong>AutoModefunc</strong> function starts by importing the recorded movement data from a CSV
+              file, and cleaning the data by setting certain values to a maximum or minimum value. This is done to
+              ensure that the robot's movement is executed correctly and safely.
+
+              The function then uses the <strong>Moveto()</strong> method to move the robot's arm to the first location,
+              which is in a depallatising position. This is a special position that the robot uses to detect and grasp
+              objects. After reaching this position, the robot starts the <strong>Depalatising()</strong> function. This
+              function uses sensors to detect the closest object, and then grasps it using its end-effector.
+
+              Once the object has been grasped, the robot follows the recorded movement data to get the object
+              processed. The recorded movement data specifies the exact positions and orientations the robot's arm
+              should move to, and the corresponding speeds and accelerations at which the arm should move. This allows
+              the robot to execute the movement with precision and repeatability.
+
+              After the object has been processed, the function <strong>Palatising()</strong> is initiated. This
+              function uses the robot's arm to place the object in the correct position. This may involve moving the
+              object to a specific location or orienting it in a particular way, depending on the requirements of the
+              task at hand.
+
+              Throughout the entire process, the function also makes use of sleep function to wait for certain time in
+              order to perform certain action which is crucial for the overall process.
+              And it uses the step variable which is used to keep track of which step is the process and then run the
+              next step with the timer and it allows the node to check the subscribed topics for changes, this includes
+              stopping the process.</p>
+            <div style="  display: flex;
+              align-items: center;
+              text-align: center;
+              justify-content: center;">
+              <h5 style="text-align: right;">Flowchart of the Palatising</h5>
+              <p style="text-align: left; margin-left: 1em; margin-bottom: 1.5em;"><span
+                  class="badge badge-danger text-uppercase mr-2">Note</span>Not yet implemented!</p>
+            </div>
+            <img src="assets/images/26.PNG" style="display: block; margin-left: auto; margin-right: auto; height: 40em;"
+              class="img-fluid" alt="Responsive image">
+
+            <div class="table-responsive">
+              <table class="table table-bordered">
+                <thead>
+                  <tr>
+                    <th>Length</th>
+                    <th>Width</th>
+                    <th>Height</th>
+                    <th>Level</th>
+                    <th>Row</th>
+                    <th>Line Spacing</th>
+                    <th>Column Spacing</th>
+                    <th>Column</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>L</td>
+                    <td>B</td>
+                    <td>H</td>
+                    <td>N</td>
+                    <td>R</td>
+                    <td>r</td>
+                    <td>C</td>
+                    <td>c</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <h5 style="text-align: center;">Equation</h5>
+            <img src="assets/images/cap.png" style="display: block; margin-left: auto; margin-right: auto;"
+              class="img-fluid" alt="Responsive image">
+          </section>
+
+          <hr class="divider">
+
+          <!-- Raspberry Pi Code
+		============================ -->
+          <section id="idocs_Raspberry_Pi_Code">
+            <h2>Raspberry Pi Code</h2>
+            <p class="lead mb-5"><code>Relay.py</code></p>
+            <p>This code is written in Python and uses the RPi.GPIO library to control the General Purpose Input/Output
+              (GPIO) pins on a Raspberry Pi.
+              The code sets up an infinite loop that continuously checks the state of 5 buttons connected to the
+              Raspberry Pi's GPIO pins.
+              If a button is pressed and the corresponding relay is currently off, the relay is turned on, and the
+              button press state and relay state are both updated.
+              If a button is pressed and the corresponding relay is currently on, the relay is turned off, and the
+              button press state and relay state are both updated. </p>
+          </section>
+
+          <hr class="divider">
+
+          <!-- Arduino Code
+    ============================ -->
+          <section id="idocs_Arduino_Code">
+            <h2>Arduino Code</h2>
+            <p class="lead mb-1"><code>switch1.ino</code></p>
+            <p class="lead">Switch and Gripper Control
+            </p>
+            <p>
+              This code allows you to control switches and a gripper button connected to an Arduino board. In this
+              project an D1 Mini - ESP8266 has been used. It provides the following functionality:
+            <ul>
+              <li>
+                Detects switch presses: The code monitors the state of switch (Speed Regulator) connected to specific
+                pins on the Arduino. When a switch is turned, it sends a message using <code>Serial.print()</code>
+                indicating which switch state is indicated, for example "Switch 2 is pressed.". For the switch the pins
+                D1, D2, D3, D4, D5, D6 have been used.
+              </li>
+              <li>
+                Gripper control: The code also monitors a gripper button connected to a specific pin on the Arduino D7.
+                When the gripper button is pressed, it sends a message indicating the gripper action ("CloseGripper").
+              </li>
+            </ul>
+            Usage:
+            <ul class="number-list">
+              <li>Connect the switches to the Arduino board, using the specified pins in the code.</li>
+              <li>Connect the gripper button to the Arduino board, using the specified pin in the code.</li>
+              <li>Upload the code to the Arduino board.</li>
+              <li>Open the serial monitor at a baud rate of 115200 to view the switch and gripper messages.</li>
+              <li>Press the switches or the gripper button to see the corresponding messages.</li>
+            </ul>
+            </p>
+          </section>
+
+          <hr class="divider">
+
+          <!-- Kuka Code
+    ============================ -->
+          <section id="idocs_Kuka_Code">
+            <h2>KUKA Code</h2>
+            <p class="lead mb-5"><code>Handguiding4.src</code></p>
+            <p>The script defines several variables such as "current_pos" and "new_pos" which are used to store the
+              robot's current and desired positions.
+
+              The script begins by initializing an ethernet connection with the computer, which allows the script to
+              communicate with the computer and receive commands.
+              The script then sets various velocity and acceleration parameters for the robotic arm's axes, as well as
+              other parameters related to the robot's behavior such as the tool and base frames and the active motion
+              data.
+
+              The script then enters a loop, where it repeatedly reads messages from the computer.
+              Based on the received messages, the script decides the type of movement that the robot should perform.
+              The script receives the movement vector and velocity, calculates the new position using a function
+              <code>new_pos = transform_frame(PE, current_pos)</code> and moves the robot to the new position.
+              The new position is then stored in "current_pos" and in the recording mode, the robot sends the current
+              positions to the computer for storage.
+
+              In the case of modes 2 and 3 (Replay Movement, Automatic Movement), the robot receives the new positions
+              instead of the vector.
+              The received types 0 and 1 control the type of movement Linear or PTP.
+
+              Additionally, the script includes advanced running which is Precise <code>$ADVANCE = 4</code>.
+              This means that the script is processing 4 inputs from the computer at the same time to ensure smooth
+              movement between movements, this will help to avoid any stoppings between movements.
+            </p>
+          </section>
+
+
+          <hr class="divider">
+
+          <!-- Kuka Code
+    ============================ -->
+          <section id="idocs_Interface">
+            <h2>Interface</h2>
+            <p class="lead mb-5"><code>Vue Interface Project</code></p>
+            <p>The Interface is built using VUE JS 
+              <br>
+              for more documentation you can find it in the 
+              <a class="btn btn-primary ml-2" href="website/index.html"> Documentation </a>
+
+            </p>
+          </section>
+
+
+          <hr class="divider">
+          <!-- Support
+		============================ -->
+          <section id="idocs_support">
+            <h2>Support</h2>
+            <p>If this documentation doesn't answer your questions, So, Please send us Email via <a
+                class="btn btn-primary ml-2" target="_blank" href="mailto:ihebmrabet0@gmail.com">Support Email</a>
+            </p>
+
+          </section>
+
+
+
+
+        </div>
+      </div>
+
+    </div>
+    <!-- Content end -->
+
+    <!-- Footer
+  ============================ -->
+    <footer id="footer" class="section bg-dark footer-text-light">
+      <div class="container">
+        <ul class="social-icons social-icons-lg social-icons-muted justify-content-center mb-3">
+          <li><a data-toggle="tooltip"
+              href="https://owncloud.fraunhofer.de/index.php/apps/files/?dir=/EFB%20-%20Flexrob100Plus/06-Arbeitsordner-MTS/Handf%C3%BChrung&fileid=389927758"
+              target="_blank" title="" data-original-title="Owncloud"><i class="fa-regular fa-cloud"></i></a></li>
+          <li><a data-toggle="tooltip" href="http://www.github.com/" target="_blank" title=""
+              data-original-title="Gitlab"><i class="fab fa-gitlab"></i></a></li>
+        </ul>
+        <p class="text-center">Copyright &copy; 2023 <a></a>FlexRob</a>. All Rights Reserved.</p>
+        <p class="text-2 text-center mb-0">Design &amp; Develop by <a class="btn-link" target="_blank">Iheb Mrabet</a>.
+        </p>
+      </div>
+    </footer>
+    <!-- Footer end -->
+
+  </div>
+  <!-- Document Wrapper end -->
+
+  <!-- Back To Top -->
+  <a id="back-to-top" data-toggle="tooltip" title="Back to Top" href="javascript:void(0)"><i
+      class="fa fa-chevron-up"></i></a>
+
+  <!-- JavaScript
+============================ -->
+  <script src="assets/vendor/jquery/jquery.min.js"></script>
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <!-- Highlight JS -->
+  <script src="assets/vendor/highlight.js/highlight.min.js"></script>
+  <!-- Easing -->
+  <script src="assets/vendor/jquery.easing/jquery.easing.min.js"></script>
+  <!-- Magnific Popup -->
+  <script src="assets/vendor/magnific-popup/jquery.magnific-popup.min.js"></script>
+  <!-- Custom Script -->
+  <script src="assets/js/theme.js"></script>
+</body>
+
+</html>
