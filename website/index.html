@@ -1,0 +1,23 @@
+<!DOCTYPE>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>FlexRob Interface Doc</title>
+    <a href="../index.html">FlexRob Doc</a>
+
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="assets/docute.css">
+  </head>
+  <body>
+
+    <div id="docute"></div>
+    <script src="assets/docute.js"></script>
+    <script>
+      new Docute({
+        target: '#docute',
+        sidebar: JSON.parse('[{"title": "Getting Started", "links": [{"title": "README", "link": "/README"},{"title": "App.vue", "link": "/GettingStarted/App"}]},{"title": "Views", "links": [{"title": "HomeView", "link": "/Views/HomeView"}, {"title": "AufzeichnenView", "link": "/Views/AufzeichnenView"}, {"title": "SaveView", "link": "/Views/SaveView"}, {"title": "AbspielenView", "link": "/Views/AbspielenView"}]}, {"title": "Components", "links": [{"title": "AxisControlButton", "link": "/components/AxisControlButton"}, {"title": "Enabled", "link": "/components/Enabled"}, {"title": "MainButton", "link": "/components/MainButton"}, {"title": "Popup", "link": "/components/Popup"}, {"title": "SavedProgram", "link": "/components/SavedProgram"}, {"title": "SimpleKeyboard", "link": "/components/SimpleKeyboard"}, {"title": "Status", "link": "/components/Status"}]}]'.replace(/\&\#34\;/g, '"'))
+      })
+    </script>
+  </body>
+</html>
