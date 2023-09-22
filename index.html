@@ -269,11 +269,11 @@
           <section id="idocs_nodes">
             <h2>Nodes</h2>
             <p class="lead">Package nodes:</p>
-            <p>The Package is divided into five main nodes: KukaRobot, Controller, Recorder , FTSN and Automode.
-              The KukaRobot node handles the communication with the robot, the Controller class receives messages from
-              an MQTT client and publishes them to the ROS2 network, the Recorder class records and saves the data
+            <p>The Package is divided into five main nodes: KukaRobot, Sender, Receiver, Recorder , FTSN and Automode.
+              The KukaRobot node handles the communication with the robot, the Receiver class receives messages from
+              an MQTT client and publishes them to the ROS2 network, the Sender class is responsible for sending the data through MQTT, the Recorder class records and saves the data
               received from the robot and reads it from the file , the FTSN node reads and processes sensor inputs and
-              then sends them using KukaRobot node and the Automode processes the autonomous movement of the robot using
+              then sends them using KukaRobot node and finally the Automode processes the autonomous movement of the robot using
               the camera.</p>
             <img src="assets/images/rosgraph.png"
               style="display: block; margin-left: auto; margin-right: auto; width: 50em;" class="img-fluid"
@@ -336,7 +336,7 @@
                     <td>Blocking or Activating TCP (Tool Center Point) Axis for the Kuka robot:<br />
                       - The First digit is the Axis Type Digit:
                       <div class="table-responsive">
-                        <table class="table table-bordered">
+                        <table class="table table-bordered" style="width: 40% !important;">
                           <thead>
                             <tr>
                               <th><strong>Axis</strong></th>
@@ -460,7 +460,7 @@
                     <td><code>String</code></td>
                     <td>topic for sending the program list (Program Name // Program Duration(sec))
                       <pre
-                        class="mb-0"><code>rostopic echo /ProgList</br>my_robot_interfaces.msg.String('lwf1//10.485007286071777,,video1//116.4000244140625,,objekt1//42.89987921714783,,video//99.9849145412445,,recordvid//136.3149139881134,,warten2//16.02592444419861,,video99//130.85994744300842,,lwf2//9.705054759979248,,lwf3//7.340078115463257,,data0//149.11453890800476')</code></pre>
+                        class="mb-0"><code>rostopic echo /ProgList</br>my_robot_interfaces.msg.String('lwf1//10.485007286071777,,video1//116.4000244140625,,objekt1//42.89987921714783,,video//99.9849145412445,,recordvid//136.3149139881134,,warten2//16.02592444419861,,lwf2//9.705054759979248,,lwf3//7.340078115463257,,data0//149.11453890800476')</code></pre>
                     </td>
                   </tr>
 
@@ -635,13 +635,14 @@
             </div>
             <h5>The following is the electrical wiring plan:</h5>
             <img src="assets/images/wiring.png" alt="Wiring" class="img-fluid">
-            <a href="https://lucid.app/lucidchart/49759642-2518-447c-b959-2c590bd48421/edit?viewport_loc=-78%2C-64%2C3840%2C1944%2C0_0&invitationId=inv_5b37ffed-2bce-444b-8719-fceb56d6e669"
-              target="_blank" rel="noopener noreferrer">
-              <button class="btn d-flex justify-content-center">
-                <img src="assets/images/lucidchart.png" alt="" style="width: 100px;">
-                Link
-              </button>
-            </a>
+
+            <div style="display: flex; align-items: center; justify-content: center;">
+              <a>You find the file in:  &#160;<a href="files/Wiring.drawio">files/Wiring.drawio</a> &#160;and you can open it using  &#160;<a href="https://www.draw.io">draw.io </a>&#160;</a>
+              <img src="assets/images/draw.png" alt="" style="width: 80px;">
+            </div>
+            
+            
+
           </section>
 
           <hr class="divider">
@@ -731,28 +732,30 @@
               It saves the received message in a variable called 'Listm' which is a list of the robot coordinates,
               velocities, orientation and the type. It takes the current timestamp and subtract it from the initial time of the
               recording process to get the time passed from the start and add it to the list and in the end saves it in a CSV file.
-            <code></code>
             </p>
 
-            <p>The <strong>Moveexcecute</strong> function is a member of the Recorder class in the provided code.
-              The purpose of the function is to read recorded data from a file, and then sequentially send the recorded
-              data as messages on a ROS topic for movement execution.
-              The function checks if the mode of the node is set to 2 (movement recorded mode) before executing.
-              If the mode is correct, it reads the data from a file, and stores it in self.rows.
-              Then, it uses a while loop to iterate through the rows and send the movement data as messages on a ROS
-              topic.
-              It sleeps between each step of the loop to simulate the recorded time delay. </p>
+            <p>The <strong>Moveexecute</strong> function is a member of the Recorder class in the provided code.
+              Its primary purpose is to read movement data from a file and send it as instructions to control the robot's motion. This is done at regular intervals triggered by a timer.
+              Before running, the function checks if the robot is in the correct mode and if certain conditions are met. It reads recorded data from a file, adjusts timestamps, sets initial parameters, and stores the processed data.
+              During execution, it checks if it's time to send the next movement command. It creates a message with motion data, introduces time delays to match recorded timing, sends the motion command to control the robot, prints the motion data for monitoring, moves to the next data point, and signals the end of the movement when all data is sent.
+              The function relies on various external factors like mode and command settings (You can find the commands in <a href="#idocs_Receiver">Receiver</a>).
+            </p>
 
-              <p><strong>Requestfunc</strong> is a callback function that handles incoming requests via a custom message type called Request. 
+
+              <p>The <strong>Requestfunc</strong> is a callback function that handles incoming requests via a custom message type called <a href="#idocs_interfaces">Request</a>. 
               Depending on the content of the request message, it performs actions such as saving, removing, starting, stopping, pausing, resuming, or stopping the recording of movement data.
               </p>
 
-              <p>The <strong>ReadProgList</strong> reads the list of available programs from the 'Cord' directory and calculates the time difference between the first and last recorded points for each program. 
-                It returns a string containing program names and their respective time differences.
+              <p>The <strong>ReadProgList</strong> reads the list of available programs from the 'Cord' directory in the order of creation the newest is first and calculates the time difference between the first and last recorded points for each program. 
+                It returns a string containing program names and their respective time duration.
               </p> 
 
-              <p> The <strong>CreateNFile</strong> creates a new CSV file with a unique name for recording.
+              <p> The <strong>CreateNFile</strong> creates a new CSV file called UNKNOWN and if it already exists, it deletes the existing file.
               </p>
+
+              <p>The <strong>Save</strong> function is responsible for saving recorded programs with a given name. It checks if a file with the same name already exists and takes appropriate actions. If a file with the same name is found, it notifies the user and publishes an error message. If a file with the same name exists as 'UNKNOWN.csv', it renames it to the specified name. After saving, it performs checks and adjustments on the saved program, such as fixing close gripper commands.</p>
+              <p>The <strong>Remove</strong> function is used to remove a program by specifying its name. It checks if a file with the given name exists in the 'Cord/' directory. If found, it deletes the file, updates the program list, and signals the successful removal of the program. If the file is not found, it indicates that the file does not exist.</p>
+
           </section>
 
           <hr class="divider">
@@ -767,8 +770,6 @@
               It publishes control data to ROS 2 topics like "Mode," "Type," etc., and uses a Request type message to
               manage program execution and control.
             </p>
-
-
           </section>
 
           <hr class="divider">
@@ -779,7 +780,7 @@
             <h2>Receiver</h2>
             <p>
               The <strong>Receiver</strong> node functions as a ROS 2 node that acts as a bridge between MQTT and ROS 2 systems. 
-              Its core role involves receiving data from MQTT, transforming it, and subsequently publishing the transformed data to ROS 2 nodes for further processing and utilization.            </p>
+              Its core role involves receiving data from MQTT, transforming it, and subsequently publishing the transformed data to ROS 2 nodes for further processing and utilization.</p>
 
             <div class="table-responsive">
               <table class="table table-bordered">
