@@ -34,4 +34,20 @@
 - It displays the "AUTO MODUS" title and a stop button.
 - Users can click the stop button to halt the automation and return to the home screen.
 
+## Screenshots
+
+![RunView](../../assets/images/FlexRob%20Views/RunView.png)
+
+
 This documentation provides an overview of the `RunView.vue` component, its template structure, imported components, data properties, created hook, methods, styles, and its role in displaying the "AUTO MODUS" and stopping the automated process within your application.
+
+
+[![Button Shield]][Shield]
+
+
+<!---------------------------------------------------------------------------->
+
+[Button Shield]: ../../assets/images/FlexRob%20Views/logo.png
+
+[Shield]: https://ihebmrabet0.github.io/FlexRob_Doc
+

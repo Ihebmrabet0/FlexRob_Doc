@@ -45,4 +45,17 @@
 - The primary button is enabled when all required fields are filled.
 - Users can navigate back to the previous view using the back button.
 
+
+
 This documentation provides an overview of the `AutoView.vue` component, its template structure, imported components, data properties, created hook, methods, computed property, styles, and its role in configuring and starting an automated process within your application.
+
+
+[![Button Shield]][Shield]
+
+
+<!---------------------------------------------------------------------------->
+
+[Button Shield]: ../../assets/images/FlexRob%20Views/logo.png
+
+[Shield]: https://ihebmrabet0.github.io/FlexRob_Doc
+

@@ -32,4 +32,21 @@
 - The component is positioned within a container with rounded corners.
 - A GIF may be used as a background, but it's not included in the documentation.
 
+## Screenshots
+
+![SaveView](../../assets/images/FlexRob%20Views/SaveView.PNG)
+
 This documentation provides an overview of the `SaveView` component, its data, methods, components, and applied styles.
+
+
+
+
+[![Button Shield]][Shield]
+
+
+<!---------------------------------------------------------------------------->
+
+[Button Shield]: ../../assets/images/FlexRob%20Views/logo.png
+
+[Shield]: https://ihebmrabet0.github.io/FlexRob_Doc
+

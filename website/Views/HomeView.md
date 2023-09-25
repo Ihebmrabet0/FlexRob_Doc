@@ -18,4 +18,22 @@
 - `.container-button`: Button container styling.
 - `.left-enable`, `.right-enable`: Element positioning.
 
+## Screenshots
+
+![HomeView](../../assets/images/FlexRob%20Views/HomeView.PNG)
+
+
+
+
 This documentation offers a brief overview of the `HomeView` component, its props, methods, and applied styles.
+
+
+[![Button Shield]][Shield]
+
+
+<!---------------------------------------------------------------------------->
+
+[Button Shield]: ../../assets/images/FlexRob%20Views/logo.png
+
+[Shield]: https://ihebmrabet0.github.io/FlexRob_Doc
+

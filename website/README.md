@@ -76,3 +76,14 @@ Please refer to the separate documentation for the ROS2 system for detailed info
 ---
 
 Thank you for using the FlexRob User Interface. If you have any questions or encounter issues related to the interface, please reach out to our support team or refer to the ROS2 documentation for system-level concerns. Happy robot controlling!
+
+
+[![Button Shield]][Shield]
+
+
+<!---------------------------------------------------------------------------->
+
+[Button Shield]: ../assets/images/FlexRob%20Views/logo.png
+
+[Shield]: https://ihebmrabet0.github.io/FlexRob_Doc
+

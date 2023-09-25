@@ -29,3 +29,14 @@
 - The `AxisControl` component is positioned at the bottom of the view, allowing users to control robot axes.
 
 This documentation provides an overview of the `App.vue` component, its template structure, imported components, and applied styles.
+
+
+[![Button Shield]][Shield]
+
+
+<!---------------------------------------------------------------------------->
+
+[Button Shield]: ../../assets/images/FlexRob%20Views/logo.png
+
+[Shield]: https://ihebmrabet0.github.io/FlexRob_Doc
+
