@@ -1,0 +1,51 @@
+SOFTWARE LICENSE AGREEMENT
+
+This Software License Agreement ("Agreement") is made effective as of 19 February 2024, by and between Iheb Mrabet ("Licensor") and Fraunhofer Institut IGP ("Licensee").
+
+WHEREAS
+
+Licensor owns and has developed certain computer software named FlexRob, which is hosted publicly on GitHub (the "Software"), and
+
+Licensee desires broad rights to use, modify, and distribute the Software, and Licensor has agreed to grant such rights exclusively to Licensee, subject to the terms and conditions set forth in this Agreement,
+
+NOW, THEREFORE
+
+In consideration of the mutual covenants contained herein, the parties agree as follows:
+
+Grant of License
+a. Licensor hereby grants to Licensee, and Licensee accepts, an exclusive, transferable, sublicensable, worldwide license to use, modify, distribute, and create derivative works based on the Software for any purpose.
+
+b. Licensor also grants Licensee the exclusive right to grant permissions to others to use, modify, distribute, and create derivative works based on the Software.
+
+Restrictions on Public Use
+a. Except as granted to Licensee under this Agreement, no other person or entity is authorized to use, modify, distribute, or create derivative works based on the Software without explicit permission from Licensor or Licensee.
+
+b. Licensor agrees to include a clear notice in the Software’s public repository and any distributions that use of the Software is restricted and subject to the terms of this Agreement.
+
+Ownership
+The Software is and shall remain the sole property of Licensor. Licensee is granted license rights only as expressly provided in this Agreement. This Agreement does not convey to Licensee any ownership rights in the Software.
+
+Term and Termination
+a. This Agreement is effective from the Effective Date and shall continue unless terminated by either party with 30 days’ written notice.
+
+b. Upon termination, Licensee must cease all use of the Software and destroy all copies, except for those rights granted perpetually.
+
+Warranty Disclaimer
+The Software is provided "as is," with all faults, and Licensor makes no warranties, express or implied, regarding the Software’s quality, performance, or fitness for a particular purpose.
+
+Limitation of Liability
+Licensor shall not be liable for any indirect, incidental, special, consequential, or punitive damages, including but not limited to, loss of profits, data, use, goodwill, or other intangible losses, resulting from Licensee’s use of the Software.
+
+General Provisions
+This Agreement constitutes the entire agreement between the parties with respect to the Software and supersedes all prior or contemporaneous understandings and agreements, whether written or oral, with respect to the Software.
+
+IN WITNESS WHEREOF, the parties have executed this Agreement as of the date first above written.
+
+Licensor:
+Iheb Mrabet
+
+Licensee:
+Fraunhofer Institut IGP
+
+Date:
+19 February 2024
